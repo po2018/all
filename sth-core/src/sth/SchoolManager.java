@@ -4,7 +4,11 @@ import sth.exceptions.BadEntryException;
 import sth.exceptions.ImportFileException;
 import sth.exceptions.NoSuchPersonIdException;
 
+import java.io.File;
 //FIXME import other classes if needed
+import java.io.IOException;
+import java.util.Map;
+import java.util.Collection;
 
 /**
  * The façade class.
@@ -12,7 +16,8 @@ import sth.exceptions.NoSuchPersonIdException;
 public class SchoolManager {
 
   //FIXME add object attributes if needed
-
+	private School _school=new School();
+	private boolean _isAdministrative,_isProfessor,_isStudent,_isRepresentative;
   //FIXME implement constructors if needed
   
   /**
@@ -41,6 +46,7 @@ public class SchoolManager {
    */
   public boolean hasAdministrative() {
     //FIXME implement predicate
+	  return _isAdministrative;
   }
 
   /**
@@ -48,6 +54,7 @@ public class SchoolManager {
    */
   public boolean hasProfessor() {
     //FIXME implement predicate
+	  return _isProfessor;
   }
 
   /**
@@ -55,6 +62,7 @@ public class SchoolManager {
    */
   public boolean hasStudent() {
     //FIXME implement predicate
+	  return _isStudent;
   }
 
   /**
@@ -62,6 +70,11 @@ public class SchoolManager {
    */
   public boolean hasRepresentative() {
     //FIXME implement predicate
+	  return _isRepresentative;
+  }
+  
+  public Collection<Person> showAllPersons(){
+	  return _school.getPeople();
   }
 
   //FIXME implement other methods (in general, one for each command in sth-app)
