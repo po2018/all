@@ -28,12 +28,13 @@ public class DoOpen extends Command<SchoolManager> {
   @Override
   public final void execute() {
     try {
-      //FIXME implement command
+      //FIXME implement command    	
+    	throw new FileNotFoundException();
     } catch (FileNotFoundException fnfe) {
       _display.popup(Message.fileNotFound());
-    } catch (ClassNotFoundException | IOException e) {
+    }/* catch (ClassNotFoundException | IOException e) {
       e.printStackTrace();
-    }
+    }*/
   }
 
 }

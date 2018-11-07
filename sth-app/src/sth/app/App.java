@@ -1,4 +1,7 @@
 package sth.app;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 
 import static pt.tecnico.po.ui.Dialog.IO;
 
@@ -16,9 +19,8 @@ public class App {
   /**
    * @param args
    */
-  public static void main(String[] args) {
+  public static void main(String[] args){
     SchoolManager school = new SchoolManager();
-
     String datafile = System.getProperty("import"); //$NON-NLS-1$
     if (datafile != null) {
       try {
